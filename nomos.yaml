@@ -6,7 +6,7 @@ metadata:
 spec:
   git:
     secretType: ssh
-    syncRepo: git@github.com:linde/nomos-acme-corp.git
+    syncRepo: git@github.com:sandyjensen/nomos-acme-corp.git
     syncBranch: master
     policyDir: nomos-root
 
