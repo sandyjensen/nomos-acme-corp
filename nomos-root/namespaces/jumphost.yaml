@@ -22,4 +22,29 @@ spec:
           requests:
             memory: "1m"
             cpu: "1m"
-        
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-jumphost-deployment
+  annotations:
+    nomos.dev/namespace-selector: selector-envprod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prod-jumphost
+  template:
+    metadata:
+      labels:
+        app: prod-jumphost
+    spec:
+      containers:
+      - name: prod-jumphost
+        image: debian
+        command: ['sleep', 'infinity']
+        resources:
+          requests:
+            memory: "1m"
+            cpu: "1m"
+
