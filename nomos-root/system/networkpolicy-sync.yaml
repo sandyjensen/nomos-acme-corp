@@ -4,8 +4,8 @@ metadata:
   name: networkpolicy
 spec:
   groups:
-  - group: extensions
+  - group: networking.k8s.io
     kinds:
     - kind: NetworkPolicy
       versions:
-      - version: v1beta1
+      - version: v1
